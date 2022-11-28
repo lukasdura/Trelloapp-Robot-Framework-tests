@@ -21,9 +21,4 @@ beforeEach( () => {
        expect(task[2]).to.have.class('completed')
   
     })
-  
-      
-  
-  
-  
     })
