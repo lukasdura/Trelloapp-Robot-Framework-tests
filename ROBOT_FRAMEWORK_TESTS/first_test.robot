@@ -14,3 +14,4 @@ ${BROWSER}        Chrome
 Try to open page
 
     Open Browser            ${URL}        ${BROWSER}
+    Maximize Browser Window
