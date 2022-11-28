@@ -1,21 +1,32 @@
-name: CI ROBOT
+name: extendedjson CI
 
 on:
   push:
-    branches: [ "main"]
-  pull_request:  
-    branches: [ "main"]
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
     runs-on: ubuntu-latest
-    
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+
     steps:
-    - uses: actions/checkout@v2
-      with:
-        python-version: 3.9
-        cache: 'pip '
-    - name:Install python dependencies
-      run: |
-         python - pip install --upgrade pip
-         pip install -r requirements.txt
-     - name: Run tests
-       run:|
-         robot tests.robot
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install tox tox-gh-actions
+
+      - name: Run tests
+        run: 
+           robot tests.robot 
