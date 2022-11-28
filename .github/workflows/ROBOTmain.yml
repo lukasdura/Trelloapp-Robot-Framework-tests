@@ -1,4 +1,4 @@
-name: extendedjson CI
+name: MyROBTOTESTS CI
 
 on:
   push:
