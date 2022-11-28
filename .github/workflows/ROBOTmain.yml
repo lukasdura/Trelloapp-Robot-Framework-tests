@@ -1,4 +1,4 @@
-name: MyROBTOTESTS CI
+name: MyROBTOTESTS Ci
 
 on:
   push:
