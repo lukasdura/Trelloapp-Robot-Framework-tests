@@ -1,7 +1,8 @@
 *** Settings ***
 
-Documentation       Sipn up to app 
+Documentation       Sipn up to app and check signup
 Library             SeleniumLibrary
+
 
 *** Variables ***    
 
@@ -12,15 +13,14 @@ ${password}           lukas
 
 
 *** Test Cases ***
-Sipn up to app 
-    Open Browser        ${url}            ${browser}
+Sipn up to app and check signup
+    Open Browser               ${url}            ${browser}
     Maximize Browser Window
-    Click Element    //div[@class="Nav_user Nav_button"]
-    Click Element    //a 
-       
-    Input Text          id:signupEmail       ${email}
-    Input Password      id:signupPassword    ${password}
-    Press Keys          id:signupPassword    ENTER  
-    
+    Click Element                     //div[@class="Nav_user Nav_button"]
+    Input Text                        //input[@id="loginEmail"]        ${email}
+    Input Password                    //input[@id="loginPassword"]     ${password}
+    Press Keys                        //input[@id="loginPassword"]     ENTER  
+    Wait Until Element Is Visible     //div[@id="loginMessage"]
+    Element Should Contain            //div[@id="loginMessage"]        User is logged in
 
 

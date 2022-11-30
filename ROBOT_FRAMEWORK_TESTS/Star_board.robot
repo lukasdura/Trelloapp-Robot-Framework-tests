@@ -5,7 +5,7 @@ Library             SeleniumLibrary
 
 *** Variables ***    
 
-${url}                http://localhost:3000/
+${url}                http://localhost:3000/board/89641985636
 ${browser}            chrome
 ${list}               ROBOT LIST 
 
@@ -14,9 +14,7 @@ ${list}               ROBOT LIST
 Create board and list and check the value of list
     Open Browser        ${url}    ${browser}
     Maximize Browser Window
-    Click Element                                  id:new-board
-    Input Text                                     class:board_addBoard    ROBOT BOARD 
-    Press Keys                                     class:board_addBoard    ENTER
+    
     Wait Until Element Is Visible    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div/h3
     Click Element               //*[@id="trello-app"]/div[5]/div[3]/div[3]/div/h3
     Input Text                  //input[@class="CreateList_input"]   ROBOT LIST
@@ -27,6 +25,6 @@ Create board and list and check the value of list
     Element Should Be Visible                     //input[@class="boardDetail_title"]
     ${list_title}            Get Value       //input[@class="Input taskTitle"]   
     Should Be Equal    ${list_title}   ${list_title}
-    Element Should Be Visible    //input[@class="Input taskTitle"]  
+    Element Should Be Visible    //input[@class="Input taskTitle"] 
+    Drag And Drop    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[3]/div       //div[@data-id="7770690629"]
 
-    

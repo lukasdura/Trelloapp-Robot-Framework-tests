@@ -18,7 +18,8 @@ Create board and list and task adn check the value of task
     Click Element               id:new-board        
     Input Text                  class:board_addBoard    ${board}
     Press Keys                  class:board_addBoard    ENTER
-    Click Element               //h3[@class="CreateList_title"]
+    Wait Until Element Is Visible    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div/h3
+    Click Element               //*[@id="trello-app"]/div[5]/div[3]/div[3]/div/h3
     Input Text                  //input[@class="CreateList_input"]   ROBOT LIST
     Press Keys                  //input[@class="CreateList_input"]   ENTER
     Click Element               //h5[@class="List_addTask"]
