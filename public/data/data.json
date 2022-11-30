@@ -1,21 +1,45 @@
 {
   "boards": [
     {
-      "name": "TEST_board",
+      "name": "sdas",
       "user": 0,
-      "id": 65268860281,
+      "id": 75794360758,
       "starred": false,
-      "created": "2022-11-28"
+      "created": "2022-11-30"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 61397725965,
+      "starred": false,
+      "created": "2022-11-30"
     }
   ],
-  "tasks": [],
-  "users": [],
+  "tasks": [
+    {
+      "boardId": 61397725965,
+      "description": "",
+      "completed": false,
+      "listId": 49341777119,
+      "title": "ROBOT TASK",
+      "id": 61829923345,
+      "created": "2022-11-30",
+      "deadline": "2022-12-03"
+    }
+  ],
+  "users": [
+    {
+      "email": "lukas2@lukas.sk",
+      "password": "$2a$10$FdYlnk2AHYKPnzYdnsjDH.y9O7aacyJ7h3lJ/N2O9em9rTGo9C5aq",
+      "id": 1
+    }
+  ],
   "lists": [
     {
-      "title": "TEST_list",
-      "boardId": 65268860281,
-      "id": 58802990573,
-      "created": "2022-11-28"
+      "boardId": 61397725965,
+      "title": "ROBOT LIST",
+      "id": 49341777119,
+      "created": "2022-11-30"
     }
   ]
 }

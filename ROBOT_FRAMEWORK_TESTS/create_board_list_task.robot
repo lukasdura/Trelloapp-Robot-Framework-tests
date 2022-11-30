@@ -7,6 +7,7 @@ Library             SeleniumLibrary
 
 ${url}                http://localhost:3000/
 ${browser}            chrome
+${board}              ROBOT BOARD 
 
 
 
@@ -14,8 +15,8 @@ ${browser}            chrome
 Create board and list and task adn check the value of task
     Open Browser        ${url}            ${browser}
     Maximize Browser Window
-    Click Element               id:new-board
-    Input Text                  class:board_addBoard    ROBOT BOARD 
+    Click Element               id:new-board        
+    Input Text                  class:board_addBoard    ${board}
     Press Keys                  class:board_addBoard    ENTER
     Click Element               //h3[@class="CreateList_title"]
     Input Text                  //input[@class="CreateList_input"]   ROBOT LIST
