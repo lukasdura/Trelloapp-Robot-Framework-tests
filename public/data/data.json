@@ -3,42 +3,82 @@
     {
       "name": "ROBOT BOARD",
       "user": 0,
-      "id": 27624647240,
+      "id": 49955719506,
       "starred": false,
-      "created": "2022-11-30"
+      "created": "2022-12-01"
     },
     {
       "name": "ROBOT BOARD",
       "user": 0,
-      "id": 89641985636,
+      "id": 61685737010,
       "starred": false,
-      "created": "2022-11-30"
-    }
-  ],
-  "tasks": [
-    {
-      "boardId": 89641985636,
-      "description": "",
-      "completed": false,
-      "listId": 34992332993,
-      "title": "drag and drop",
-      "id": 59495496556,
-      "created": "2022-11-30",
-      "deadline": "2022-12-03",
-      "order": 0
+      "created": "2022-12-01"
     },
     {
-      "boardId": 89641985636,
-      "description": "",
-      "completed": false,
-      "listId": 7770690629,
-      "title": "bla",
-      "id": 48170469884,
-      "created": "2022-11-30",
-      "deadline": "2022-12-03",
-      "order": 0
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 71539083992,
+      "starred": false,
+      "created": "2022-12-01"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 22349617743,
+      "starred": false,
+      "created": "2022-12-01"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 42847876500,
+      "starred": false,
+      "created": "2022-12-01"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 40745557407,
+      "starred": false,
+      "created": "2022-12-01"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 67386292680,
+      "starred": false,
+      "created": "2022-12-01"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 71111884370,
+      "starred": false,
+      "created": "2022-12-01"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 16319325228,
+      "starred": false,
+      "created": "2022-12-01"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 53339947537,
+      "starred": false,
+      "created": "2022-12-01"
+    },
+    {
+      "name": "ROBOT BOARD",
+      "user": 0,
+      "id": 63766022260,
+      "starred": false,
+      "created": "2022-12-01"
     }
   ],
+  "tasks": [],
   "users": [
     {
       "email": "lukas2@lukas.sk",
@@ -51,36 +91,5 @@
       "id": 2
     }
   ],
-  "lists": [
-    {
-      "boardId": 89641985636,
-      "title": "ROBOT LIST",
-      "id": 34992332993,
-      "created": "2022-11-30"
-    },
-    {
-      "boardId": 89641985636,
-      "title": "ROBOT LIST 2",
-      "id": 7770690629,
-      "created": "2022-11-30"
-    },
-    {
-      "boardId": 89641985636,
-      "title": "ROBOT LIST",
-      "id": 48305919158,
-      "created": "2022-11-30"
-    },
-    {
-      "boardId": 89641985636,
-      "title": "ROBOT LIST",
-      "id": 34267979892,
-      "created": "2022-11-30"
-    },
-    {
-      "boardId": 89641985636,
-      "title": "ROBOT LIST",
-      "id": 67109978268,
-      "created": "2022-11-30"
-    }
-  ]
+  "lists": []
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20221201 14:46:04.131" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="/home/lukas/.vscode/extensions/robocorp.robotframework-lsp-1.5.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Open Browser">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<msg timestamp="20221201 14:46:04.534" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20221201 14:46:04.533" endtime="20221201 14:46:04.534"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20221201 14:46:04.535" endtime="20221201 14:46:04.535"/>
+</kw>
+<kw name="Click Element">
+<arg>id:new-board</arg>
+<status status="NOT RUN" starttime="20221201 14:46:04.536" endtime="20221201 14:46:04.536"/>
+</kw>
+<kw name="Input Text">
+<arg>class:board_addBoard</arg>
+<arg>${board}</arg>
+<status status="NOT RUN" starttime="20221201 14:46:04.537" endtime="20221201 14:46:04.537"/>
+</kw>
+<kw name="Press Keys">
+<arg>class:board_addBoard</arg>
+<arg>ENTER</arg>
+<status status="NOT RUN" starttime="20221201 14:46:04.538" endtime="20221201 14:46:04.538"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]</arg>
+<status status="NOT RUN" starttime="20221201 14:46:04.539" endtime="20221201 14:46:04.539"/>
+</kw>
+<kw name="Click Element">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]</arg>
+<status status="NOT RUN" starttime="20221201 14:46:04.540" endtime="20221201 14:46:04.540"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>//span[contains(.,"Delete board")]</arg>
+<status status="NOT RUN" starttime="20221201 14:46:04.541" endtime="20221201 14:46:04.541"/>
+</kw>
+<kw name="Click Element">
+<arg>//span[contains(.,"Delete board")]</arg>
+<status status="NOT RUN" starttime="20221201 14:46:04.542" endtime="20221201 14:46:04.542"/>
+</kw>
+<kw name="Page Should Not Contain">
+<arg>Delete board and check if its deleted</arg>
+<status status="NOT RUN" starttime="20221201 14:46:04.542" endtime="20221201 14:46:04.542"/>
+</kw>
+<status status="PASS" starttime="20221201 14:46:04.144" endtime="20221201 14:46:07.218"/>
+</kw>
+<status status="PASS" starttime="20221201 14:46:04.143" endtime="20221201 14:46:07.218"/>
+</test>
+<status status="PASS" starttime="20221201 14:46:04.132" endtime="20221201 14:46:07.220"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

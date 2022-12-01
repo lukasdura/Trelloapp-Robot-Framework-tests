@@ -1,108 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20221130 13:27:23.019" rpa="false" schemaversion="3">
-<suite id="s1" name="Sign in" source="/home/lukas/Plocha/PROJECTS/TRELLO_robot_framework/trelloapp/ROBOT_FRAMEWORK_TESTS/Sign_in.robot">
-<test id="s1-t1" name="Sipn up to app" line="16">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20221201 15:01:35.301" rpa="false" schemaversion="3">
+<suite id="s1" name="Delete Board" source="/home/lukas/Plocha/PROJECTS/TRELLO_robot_framework/trelloapp/TESTS/delete_board.robot">
+<test id="s1-t1" name="Delete board and check if its deleted" line="15">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221130 13:27:23.115" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
-<status status="PASS" starttime="20221130 13:27:23.115" endtime="20221130 13:27:24.098"/>
+<msg timestamp="20221201 15:01:35.402" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20221201 15:01:35.402" endtime="20221201 15:01:36.380"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221130 13:27:24.098" endtime="20221130 13:27:24.204"/>
+<status status="PASS" starttime="20221201 15:01:36.380" endtime="20221201 15:01:36.485"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class="Nav_user Nav_button"]</arg>
+<arg>id:new-board</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221130 13:27:24.205" level="INFO">Clicking element '//div[@class="Nav_user Nav_button"]'.</msg>
-<status status="PASS" starttime="20221130 13:27:24.205" endtime="20221130 13:27:24.247"/>
+<msg timestamp="20221201 15:01:36.487" level="INFO">Clicking element 'id:new-board'.</msg>
+<status status="PASS" starttime="20221201 15:01:36.486" endtime="20221201 15:01:36.529"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id:signupEmail</arg>
-<arg>${email}</arg>
+<arg>class:board_addBoard</arg>
+<arg>${board}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221130 13:27:24.249" level="INFO">Typing text 'lukas2@lukas.sk' into text field 'id:signupEmail'.</msg>
-<msg timestamp="20221130 13:27:24.437" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221130 13:27:24.438" level="FAIL">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=107.0.5304.121)
-Stacktrace:
-#0 0x55d231848463 &lt;unknown&gt;
-#1 0x55d23160c75a &lt;unknown&gt;
-#2 0x55d2316409b3 &lt;unknown&gt;
-#3 0x55d23166b622 &lt;unknown&gt;
-#4 0x55d23163dba7 &lt;unknown&gt;
-#5 0x55d23166b78e &lt;unknown&gt;
-#6 0x55d23168430f &lt;unknown&gt;
-#7 0x55d23166b443 &lt;unknown&gt;
-#8 0x55d23163c3c5 &lt;unknown&gt;
-#9 0x55d23163d531 &lt;unknown&gt;
-#10 0x55d23189adce &lt;unknown&gt;
-#11 0x55d23189e192 &lt;unknown&gt;
-#12 0x55d23187f93e &lt;unknown&gt;
-#13 0x55d23189f103 &lt;unknown&gt;
-#14 0x55d231872d85 &lt;unknown&gt;
-#15 0x55d2318c00a8 &lt;unknown&gt;
-#16 0x55d2318c0239 &lt;unknown&gt;
-#17 0x55d2318db492 &lt;unknown&gt;
-#18 0x7f4fc8babb43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20221130 13:27:24.248" endtime="20221130 13:27:24.440"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id:signupPassword</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221130 13:27:24.440" endtime="20221130 13:27:24.440"/>
+<msg timestamp="20221201 15:01:36.530" level="INFO">Typing text 'ROBOT BOARD' into text field 'class:board_addBoard'.</msg>
+<status status="PASS" starttime="20221201 15:01:36.530" endtime="20221201 15:01:36.623"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
-<arg>id:signupPassword</arg>
+<arg>class:board_addBoard</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="NOT RUN" starttime="20221130 13:27:24.441" endtime="20221130 13:27:24.441"/>
+<msg timestamp="20221201 15:01:36.624" level="INFO">Sending key(s) ('ENTER',) to class:board_addBoard element.</msg>
+<msg timestamp="20221201 15:01:36.908" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20221201 15:01:36.908" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20221201 15:01:36.623" endtime="20221201 15:01:36.915"/>
 </kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//div[@id="loginMessage"]</arg>
-<arg>User is logged in</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="NOT RUN" starttime="20221130 13:27:24.441" endtime="20221130 13:27:24.441"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20221201 15:01:36.964" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20221201 15:01:36.916" endtime="20221201 15:01:37.182"/>
 </kw>
-<status status="FAIL" starttime="20221130 13:27:23.114" endtime="20221130 13:27:24.442">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=107.0.5304.121)
-Stacktrace:
-#0 0x55d231848463 &lt;unknown&gt;
-#1 0x55d23160c75a &lt;unknown&gt;
-#2 0x55d2316409b3 &lt;unknown&gt;
-#3 0x55d23166b622 &lt;unknown&gt;
-#4 0x55d23163dba7 &lt;unknown&gt;
-#5 0x55d23166b78e &lt;unknown&gt;
-#6 0x55d23168430f &lt;unknown&gt;
-#7 0x55d23166b443 &lt;unknown&gt;
-#8 0x55d23163c3c5 &lt;unknown&gt;
-#9 0x55d23163d531 &lt;unknown&gt;
-#10 0x55d23189adce &lt;unknown&gt;
-#11 0x55d23189e192 &lt;unknown&gt;
-#12 0x55d23187f93e &lt;unknown&gt;
-#13 0x55d23189f103 &lt;unknown&gt;
-#14 0x55d231872d85 &lt;unknown&gt;
-#15 0x55d2318c00a8 &lt;unknown&gt;
-#16 0x55d2318c0239 &lt;unknown&gt;
-#17 0x55d2318db492 &lt;unknown&gt;
-#18 0x7f4fc8babb43 &lt;unknown&gt;
-</status>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221201 15:01:37.182" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]'.</msg>
+<status status="PASS" starttime="20221201 15:01:37.182" endtime="20221201 15:01:37.216"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[contains(.,"Delete board")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221201 15:01:37.217" endtime="20221201 15:01:37.239"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(.,"Delete board")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221201 15:01:37.239" level="INFO">Clicking element '//span[contains(.,"Delete board")]'.</msg>
+<status status="PASS" starttime="20221201 15:01:37.239" endtime="20221201 15:01:37.279"/>
+</kw>
+<status status="PASS" starttime="20221201 15:01:35.401" endtime="20221201 15:01:37.280"/>
 </test>
-<doc>Sipn up to app</doc>
-<status status="FAIL" starttime="20221130 13:27:23.021" endtime="20221130 13:27:24.443"/>
+<doc>Delete board and check if its deleted</doc>
+<status status="PASS" starttime="20221201 15:01:35.303" endtime="20221201 15:01:37.281"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Sign in">Sign in</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Delete Board">Delete Board</stat>
 </suite>
 </statistics>
 <errors>
