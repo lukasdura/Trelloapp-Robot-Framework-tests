@@ -2,7 +2,7 @@
 
 Documentation       Create board and list and check the value of list
 Library             SeleniumLibrary
-Library    String
+
 
 *** Variables ***    
 
@@ -22,21 +22,21 @@ Create board and list and check the value of list
     
     FOR    ${index}    IN RANGE    2    
 
-    ${list}      Set Variable         ROBOT LIST    ROBOT LIST 2
+    ${list}      Set Variable         ROBOT LIST    
 
     
     
     Wait Until Element Is Visible    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div/h3
     Click Element                    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div/h3
-    Input Text                       //input[@class="CreateList_input"]   ROBOT LIST
-    Press Keys                       //input[@class="CreateList_input"]   ENTER
+    Input Text                       //input[@class="CreateList_input"]    ${list}
+    Press Keys                       //input[@class="CreateList_input"]    ENTER
     END
-    Click Element                //h5[@class="List_addTask"]      
-    Input Text                  //textarea[@data-id="newTaskTitle"]   ${drag}   
-     Press Keys                  //textarea[@data-id="newTaskTitle"]   ENTER
-    Drag And Drop                //div[@data-cy="task"]                 //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[2] 
+    Click Element                    //h5[@class="List_addTask"]      
+    Input Text                       //textarea[@data-id="newTaskTitle"]   ${drag}   
+    Press Keys                      //textarea[@data-id="newTaskTitle"]    ENTER
+    Drag And Drop                    //div[@data-cy="task"]                //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[2] 
 
-    //*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]/svg/path//*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]/svg/path
+   
     
    
     

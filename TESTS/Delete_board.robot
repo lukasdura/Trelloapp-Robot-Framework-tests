@@ -1,6 +1,6 @@
 *** Settings ***
 
-Documentation       Delete board and check if its deleted
+Documentation       Delete board
 Library             SeleniumLibrary
 
 *** Variables ***    
@@ -12,7 +12,7 @@ ${board}              ROBOT BOARD
 
 
 *** Test Cases **
-Delete board and check if its deleted
+Delete board
 
     Open Browser                ${url}            ${browser}
     Maximize Browser Window
@@ -23,6 +23,7 @@ Delete board and check if its deleted
     Click Element                         //*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]
     Wait Until Element Is Visible         //span[contains(.,"Delete board")]
     Click Element                         //span[contains(.,"Delete board")]    
+    
    
 
     
