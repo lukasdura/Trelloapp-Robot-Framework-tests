@@ -12,8 +12,8 @@ ${list}               ROBOT LIST
 
 *** Test Cases ***
 Create board and list and check the value of list
-    Open Browser        ${url}    ${browser}
-    Maximize Browser Window
+    Open Browser        ${url}    ${browser}     alias=mybrowser
+    Maximize Browser Window   
     Click Element                                  id:new-board
     Input Text                                     class:board_addBoard    ROBOT BOARD 
     Press Keys                                     class:board_addBoard    ENTER
