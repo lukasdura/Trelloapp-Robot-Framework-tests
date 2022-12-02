@@ -14,7 +14,7 @@ ${board}              ROBOT BOARD
 *** Test Cases **
 Delete board
 
-    Open Browser                ${url}            ${browser}
+    open Browser                ${url}            ${browser}
     Maximize Browser Window
     Click Element                         id:new-board
     Input Text                            class:board_addBoard       ${board}
@@ -23,9 +23,14 @@ Delete board
     Click Element                         //*[@id="trello-app"]/div[5]/div[3]/div[2]/div[1]
     Wait Until Element Is Visible         //span[contains(.,"Delete board")]
     Click Element                         //span[contains(.,"Delete board")]    
-    
+   
+           
+
+ 
    
 
+
+    
     
 
     

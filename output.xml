@@ -1,74 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20221201 16:54:28.598" rpa="false" schemaversion="3">
-<suite id="s1" name="Sign in" source="/home/lukas/Plocha/PROJECTS/TRELLO_robot_framework/trelloapp/TESTS/Sign_in.robot">
-<test id="s1-t1" name="Sipn up to app and check signup" line="16">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20221202 09:27:58.427" rpa="false" schemaversion="3">
+<suite id="s1" name="Star" source="/home/lukas/Plocha/PROJECTS/TRELLO_robot_framework/trelloapp/TESTS/star.robot">
+<test id="s1-t1" name="Create board and list and check the value of list" line="14">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221201 16:54:28.701" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
-<status status="PASS" starttime="20221201 16:54:28.700" endtime="20221201 16:54:29.685"/>
+<msg timestamp="20221202 09:27:58.596" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20221202 09:27:58.595" endtime="20221202 09:27:59.788"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221201 16:54:29.686" endtime="20221201 16:54:29.789"/>
+<status status="PASS" starttime="20221202 09:27:59.789" endtime="20221202 09:27:59.899"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class="Nav_user Nav_button"]</arg>
+<arg>css:board:nth-child(2) .Star</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 16:54:29.790" level="INFO">Clicking element '//div[@class="Nav_user Nav_button"]'.</msg>
-<status status="PASS" starttime="20221201 16:54:29.789" endtime="20221201 16:54:29.829"/>
+<msg timestamp="20221202 09:27:59.900" level="INFO">Clicking element 'css:board:nth-child(2) .Star'.</msg>
+<msg timestamp="20221202 09:28:00.103" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221202 09:28:00.104" level="FAIL">Element with locator 'css:board:nth-child(2) .Star' not found.</msg>
+<status status="FAIL" starttime="20221202 09:27:59.900" endtime="20221202 09:28:00.105"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@id="loginEmail"]</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221201 16:54:29.830" level="INFO">Typing text 'lukas2@lukas.sk' into text field '//input[@id="loginEmail"]'.</msg>
-<status status="PASS" starttime="20221201 16:54:29.829" endtime="20221201 16:54:29.924"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>//input[@id="loginPassword"]</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20221201 16:54:29.925" level="INFO">Typing password into text field '//input[@id="loginPassword"]'.</msg>
-<msg timestamp="20221201 16:54:29.959" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20221201 16:54:29.995" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20221201 16:54:29.924" endtime="20221201 16:54:29.995"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>//input[@id="loginPassword"]</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221201 16:54:29.996" level="INFO">Sending key(s) ('ENTER',) to //input[@id="loginPassword"] element.</msg>
-<msg timestamp="20221201 16:54:30.274" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20221201 16:54:30.275" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20221201 16:54:29.996" endtime="20221201 16:54:30.282"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//div[@id="loginMessage"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221201 16:54:30.282" endtime="20221201 16:54:30.522"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//div[@id="loginMessage"]</arg>
-<arg>User is logged in</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20221201 16:54:30.541" level="INFO">Element '//div[@id="loginMessage"]' contains text 'User is logged in'.</msg>
-<status status="PASS" starttime="20221201 16:54:30.523" endtime="20221201 16:54:30.541"/>
-</kw>
-<status status="PASS" starttime="20221201 16:54:28.699" endtime="20221201 16:54:30.541"/>
+<status status="FAIL" starttime="20221202 09:27:58.594" endtime="20221202 09:28:00.106">Element with locator 'css:board:nth-child(2) .Star' not found.</status>
 </test>
-<doc>Sipn up to app and check signup</doc>
-<status status="PASS" starttime="20221201 16:54:28.600" endtime="20221201 16:54:30.542"/>
+<doc>Create board and list and check the value of list</doc>
+<status status="FAIL" starttime="20221202 09:27:58.430" endtime="20221202 09:28:00.107"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Sign in">Sign in</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Star">Star</stat>
 </suite>
 </statistics>
 <errors>
