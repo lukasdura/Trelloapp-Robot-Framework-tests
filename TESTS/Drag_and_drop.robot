@@ -1,6 +1,6 @@
 *** Settings ***
 
-Documentation       Create board and list and check the value of list
+Documentation       Create board and list and use Drag and Drop
 Library             SeleniumLibrary
 
 
@@ -13,7 +13,7 @@ ${board}              ROBOT BOARD
 
 
 *** Test Cases ***
-Create board and list and check the value of list
+Create board and list and use Drag and Drop
     Open Browser        ${url}    ${browser}
     Maximize Browser Window
     Click Element    id:new-board

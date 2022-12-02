@@ -1,6 +1,6 @@
 *** Settings ***
 
-Documentation       Sipn up to app and check signup
+Documentation       Sipn up to app and check Signup
 Library             SeleniumLibrary
 
 
@@ -13,7 +13,7 @@ ${password}           lukas
 
 
 *** Test Cases ***
-Sipn up to app and check signup
+Sipn up to app and check Sign up
     Open Browser               ${url}            ${browser}
     Maximize Browser Window
     Click Element                     //div[@class="Nav_user Nav_button"]

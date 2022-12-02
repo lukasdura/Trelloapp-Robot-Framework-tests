@@ -30,4 +30,7 @@ Create board and list and check the value of list
     Element Should Be Visible          //input[@class="Input taskTitle"]  
     Log To Console                     ${board_title} 
     Log To Console                     ${list_title}
-    
+    Click Element                      //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[1]
+    Click Element    /html/body/div[1]/div[5]/div[3]/div[3]/div[1]/div[1]/div/span[1]
+
+   
