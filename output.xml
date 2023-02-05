@@ -1,128 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20230205 13:25:41.880" rpa="false" schemaversion="3">
-<suite id="s1" name="Set coockies" source="/home/lukas/Plocha/PROJECTS/TRELLO_robot_framework/trelloapp/TESTS/Set_coockies.robot">
-<test id="s1-t1" name="training" line="15">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20230205 13:40:50.626" rpa="false" schemaversion="3">
+<suite id="s1" name="Practice" source="/home/lukas/Plocha/PROJECTS/TRELLO_robot_framework/trelloapp/TESTS/Practice.robot">
+<test id="s1-t1" name="training" line="16">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230205 13:25:42.024" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
-<status status="PASS" starttime="20230205 13:25:42.023" endtime="20230205 13:25:43.110"/>
+<msg timestamp="20230205 13:40:50.762" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20230205 13:40:50.761" endtime="20230205 13:40:51.761"/>
 </kw>
 <kw name="Add Cookie" library="SeleniumLibrary">
 <arg>trello_token</arg>
 <arg>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1a2FzQGx1a2FzLnNrIiwiaWF0IjoxNjc1NTk5MzMzLCJleHAiOjE2NzU2MDI5MzMsInN1YiI6IjIifQ.2_0KJ19mq3cr6J6aKfvaY3Cr0bN7nq1nwgDZP1HPlcE</arg>
 <doc>Adds a cookie to your current session.</doc>
-<status status="PASS" starttime="20230205 13:25:43.110" endtime="20230205 13:25:43.121"/>
+<status status="PASS" starttime="20230205 13:40:51.761" endtime="20230205 13:40:51.771"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230205 13:25:43.122" endtime="20230205 13:25:43.227"/>
+<status status="PASS" starttime="20230205 13:40:51.771" endtime="20230205 13:40:51.875"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="new-board"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:43.229" level="INFO">Clicking element '//*[@id="new-board"]'.</msg>
-<status status="PASS" starttime="20230205 13:25:43.227" endtime="20230205 13:25:43.292"/>
+<msg timestamp="20230205 13:40:51.876" level="INFO">Clicking element '//*[@id="new-board"]'.</msg>
+<status status="PASS" starttime="20230205 13:40:51.876" endtime="20230205 13:40:51.921"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="new-board"]/input</arg>
 <arg>${board_title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:43.294" level="INFO">Typing text 'newboard' into text field '//*[@id="new-board"]/input'.</msg>
-<status status="PASS" starttime="20230205 13:25:43.293" endtime="20230205 13:25:43.412"/>
+<msg timestamp="20230205 13:40:51.922" level="INFO">Typing text 'newboard' into text field '//*[@id="new-board"]/input'.</msg>
+<status status="PASS" starttime="20230205 13:40:51.921" endtime="20230205 13:40:51.998"/>
 </kw>
 <kw name="Double Click Element" library="SeleniumLibrary">
 <arg>//*[@id="new-board"]/div/button</arg>
 <doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:43.414" level="INFO">Double clicking element '//*[@id="new-board"]/div/button'.</msg>
-<status status="PASS" starttime="20230205 13:25:43.413" endtime="20230205 13:25:43.739"/>
+<msg timestamp="20230205 13:40:51.999" level="INFO">Double clicking element '//*[@id="new-board"]/div/button'.</msg>
+<status status="PASS" starttime="20230205 13:40:51.999" endtime="20230205 13:40:52.300"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="trello-app"]/div[5]/div[3]/div[2]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:43.741" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[2]/input'.</msg>
-<status status="PASS" starttime="20230205 13:25:43.740" endtime="20230205 13:25:43.796"/>
+<msg timestamp="20230205 13:40:52.301" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[2]/input'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.300" endtime="20230205 13:40:52.343"/>
 </kw>
 <kw name="Get Value" library="SeleniumLibrary">
 <var>${board_title}</var>
 <arg>//*[@id="trello-app"]/div[5]/div[3]/div[2]/input</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:43.816" level="INFO">${board_title} = newboard</msg>
-<status status="PASS" starttime="20230205 13:25:43.797" endtime="20230205 13:25:43.816"/>
+<msg timestamp="20230205 13:40:52.362" level="INFO">${board_title} = newboard</msg>
+<status status="PASS" starttime="20230205 13:40:52.343" endtime="20230205 13:40:52.362"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${board_title}</arg>
 <arg>${board_title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230205 13:25:43.817" endtime="20230205 13:25:43.817"/>
+<status status="PASS" starttime="20230205 13:40:52.362" endtime="20230205 13:40:52.363"/>
 </kw>
 <kw name="Location Should Contain" library="SeleniumLibrary">
 <arg>http://localhost:3000/board/</arg>
 <doc>Verifies that the current URL contains ``expected``.</doc>
-<msg timestamp="20230205 13:25:43.824" level="INFO">Current location contains 'http://localhost:3000/board/'.</msg>
-<status status="PASS" starttime="20230205 13:25:43.818" endtime="20230205 13:25:43.824"/>
+<msg timestamp="20230205 13:40:52.367" level="INFO">Current location contains 'http://localhost:3000/board/'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.363" endtime="20230205 13:40:52.368"/>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${create_list}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230205 13:25:43.830" level="INFO">${create_list} = http://localhost:3000/board/8807357729</msg>
-<status status="PASS" starttime="20230205 13:25:43.825" endtime="20230205 13:25:43.830"/>
+<msg timestamp="20230205 13:40:52.373" level="INFO">${create_list} = http://localhost:3000/board/43237197811</msg>
+<status status="PASS" starttime="20230205 13:40:52.368" endtime="20230205 13:40:52.373"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${create_list}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230205 13:25:43.832" level="INFO">Opening url 'http://localhost:3000/board/8807357729'</msg>
-<status status="PASS" starttime="20230205 13:25:43.831" endtime="20230205 13:25:43.965"/>
+<msg timestamp="20230205 13:40:52.374" level="INFO">Opening url 'http://localhost:3000/board/43237197811'</msg>
+<status status="PASS" starttime="20230205 13:40:52.373" endtime="20230205 13:40:52.478"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:43.967" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div'.</msg>
-<status status="PASS" starttime="20230205 13:25:43.966" endtime="20230205 13:25:44.034"/>
+<msg timestamp="20230205 13:40:52.479" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.478" endtime="20230205 13:40:52.542"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div/input</arg>
 <arg>${list_title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:44.036" level="INFO">Typing text 'newlist' into text field '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div/input'.</msg>
-<status status="PASS" starttime="20230205 13:25:44.035" endtime="20230205 13:25:44.134"/>
+<msg timestamp="20230205 13:40:52.544" level="INFO">Typing text 'newlist' into text field '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div/input'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.543" endtime="20230205 13:40:52.631"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:44.135" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div/div/button'.</msg>
-<status status="PASS" starttime="20230205 13:25:44.134" endtime="20230205 13:25:44.182"/>
+<msg timestamp="20230205 13:40:52.632" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div/div/button'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.632" endtime="20230205 13:40:52.674"/>
 </kw>
 <kw name="Get Value" library="SeleniumLibrary">
 <var>${list_title}</var>
 <arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/input</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20230205 13:25:44.219" level="INFO">${list_title} = newlist</msg>
-<status status="PASS" starttime="20230205 13:25:44.183" endtime="20230205 13:25:44.220"/>
+<msg timestamp="20230205 13:40:52.706" level="INFO">${list_title} = newlist</msg>
+<status status="PASS" starttime="20230205 13:40:52.675" endtime="20230205 13:40:52.707"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_title}</arg>
 <arg>${list_title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230205 13:25:44.221" endtime="20230205 13:25:44.222"/>
+<status status="PASS" starttime="20230205 13:40:52.707" endtime="20230205 13:40:52.708"/>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${list_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230205 13:25:44.228" level="INFO">${list_url} = http://localhost:3000/board/8807357729</msg>
-<status status="PASS" starttime="20230205 13:25:44.223" endtime="20230205 13:25:44.229"/>
+<msg timestamp="20230205 13:40:52.711" level="INFO">${list_url} = http://localhost:3000/board/43237197811</msg>
+<status status="PASS" starttime="20230205 13:40:52.708" endtime="20230205 13:40:52.712"/>
 </kw>
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>${list_url}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20230205 13:25:44.233" level="INFO">Current location is 'http://localhost:3000/board/8807357729'.</msg>
-<status status="PASS" starttime="20230205 13:25:44.229" endtime="20230205 13:25:44.234"/>
+<msg timestamp="20230205 13:40:52.716" level="INFO">Current location is 'http://localhost:3000/board/43237197811'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.712" endtime="20230205 13:40:52.717"/>
 </kw>
-<status status="PASS" starttime="20230205 13:25:42.022" endtime="20230205 13:25:44.234"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${number_of_clicks}</var>
+<arg>3</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230205 13:40:52.718" level="INFO">${number_of_clicks} = 3</msg>
+<status status="PASS" starttime="20230205 13:40:52.717" endtime="20230205 13:40:52.718"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>${number_of_clicks}</value>
+<iter>
+<var name="${index}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/h5</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:52.721" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/h5'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.720" endtime="20230205 13:40:52.761"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/textarea</arg>
+<arg>${task_title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:52.762" level="INFO">Typing text 'newtask' into text field '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/textarea'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.761" endtime="20230205 13:40:52.825"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[4]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:52.825" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[4]/button'.</msg>
+<status status="PASS" starttime="20230205 13:40:52.825" endtime="20230205 13:40:52.860"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230205 13:40:53.023" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230205 13:40:52.861" endtime="20230205 13:40:53.023"/>
+</kw>
+<status status="PASS" starttime="20230205 13:40:52.719" endtime="20230205 13:40:53.023"/>
+</iter>
+<iter>
+<var name="${index}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/h5</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:53.024" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/h5'.</msg>
+<status status="PASS" starttime="20230205 13:40:53.024" endtime="20230205 13:40:53.048"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/textarea</arg>
+<arg>${task_title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:53.049" level="INFO">Typing text 'newtask' into text field '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/textarea'.</msg>
+<status status="PASS" starttime="20230205 13:40:53.049" endtime="20230205 13:40:53.092"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[4]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:53.092" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[4]/button'.</msg>
+<status status="PASS" starttime="20230205 13:40:53.092" endtime="20230205 13:40:53.115"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230205 13:40:53.262" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230205 13:40:53.115" endtime="20230205 13:40:53.262"/>
+</kw>
+<status status="PASS" starttime="20230205 13:40:53.024" endtime="20230205 13:40:53.262"/>
+</iter>
+<iter>
+<var name="${index}">2</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/h5</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:53.263" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/h5'.</msg>
+<status status="PASS" starttime="20230205 13:40:53.262" endtime="20230205 13:40:53.289"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/textarea</arg>
+<arg>${task_title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:53.290" level="INFO">Typing text 'newtask' into text field '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/textarea'.</msg>
+<status status="PASS" starttime="20230205 13:40:53.289" endtime="20230205 13:40:53.331"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[4]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:53.332" level="INFO">Clicking element '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[4]/button'.</msg>
+<status status="PASS" starttime="20230205 13:40:53.332" endtime="20230205 13:40:53.357"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230205 13:40:53.505" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230205 13:40:53.357" endtime="20230205 13:40:53.505"/>
+</kw>
+<status status="PASS" starttime="20230205 13:40:53.262" endtime="20230205 13:40:53.505"/>
+</iter>
+<status status="PASS" starttime="20230205 13:40:52.718" endtime="20230205 13:40:53.506"/>
+</for>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//input[@data-cy="task-done"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230205 13:40:53.506" level="INFO">Clicking button '//input[@data-cy="task-done"]'.</msg>
+<status status="PASS" starttime="20230205 13:40:53.506" endtime="20230205 13:40:53.560"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>//input[@data-cy="task-done"]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230205 13:40:53.562" level="INFO">Verifying checkbox '//input[@data-cy="task-done"]' is selected.</msg>
+<status status="PASS" starttime="20230205 13:40:53.561" endtime="20230205 13:40:53.616"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[3]/div[2]/div/input</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20230205 13:40:53.618" level="INFO">Verifying checkbox '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[3]/div[2]/div/input' is not selected.</msg>
+<status status="PASS" starttime="20230205 13:40:53.617" endtime="20230205 13:40:53.656"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[3]/div[3]/div/input</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20230205 13:40:53.657" level="INFO">Verifying checkbox '//*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[3]/div[3]/div/input' is not selected.</msg>
+<status status="PASS" starttime="20230205 13:40:53.656" endtime="20230205 13:40:53.681"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//div[@id="loginMessage"]</arg>
+<arg>User is logged in</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230205 13:40:53.701" level="INFO">Element '//div[@id="loginMessage"]' contains text 'User is logged in'.</msg>
+<status status="PASS" starttime="20230205 13:40:53.682" endtime="20230205 13:40:53.702"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230205 13:40:53.703" endtime="20230205 13:40:53.784"/>
+</kw>
+<status status="PASS" starttime="20230205 13:40:50.759" endtime="20230205 13:40:53.785"/>
 </test>
-<doc>Set coockies</doc>
-<status status="PASS" starttime="20230205 13:25:41.883" endtime="20230205 13:25:44.236"/>
+<doc>Playground ( add coockies + creating board, list, tasks, select task as done, check if user is loged in .... )</doc>
+<status status="PASS" starttime="20230205 13:40:50.630" endtime="20230205 13:40:53.786"/>
 </suite>
 <statistics>
 <total>
@@ -131,7 +262,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Set coockies">Set coockies</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Practice">Practice</stat>
 </suite>
 </statistics>
 <errors>

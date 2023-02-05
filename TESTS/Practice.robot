@@ -1,6 +1,6 @@
 *** Settings ***
 
-Documentation        only training
+Documentation        Playground ( add coockies + creating board, list, tasks, select task as done, check if user is loged in .... )
 Library              SeleniumLibrary
 Library    String
 Library    OperatingSystem
@@ -35,24 +35,25 @@ training
     Should Be Equal     ${list_title}        ${list_title}
     ${list_url}          Get Location 
     Location Should Be    ${list_url} 
-    ${number_of_clicks}        Set Variable    10
+    ${number_of_clicks}        Set Variable    3
 
     
     FOR    ${index}    IN RANGE    ${number_of_clicks}
     Click Element             //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/h5  
     Input Text    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/textarea    ${task_title}
     Click Element    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[4]/button
+    Capture Page Screenshot
         
     END
+     Click Button    //input[@data-cy="task-done"]
+     Checkbox Should Be Selected    //input[@data-cy="task-done"] 
+     Checkbox Should Not Be Selected   //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[3]/div[2]/div/input
+     Checkbox Should Not Be Selected    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[3]/div[3]/div/input
 
+     Element Should Contain      //div[@id="loginMessage"]    User is logged in
 
-    
-    Click Element   //input[@data-cy="task-done"]
-    
-    Click Element   //input[@data-cy="task-done"]  
+     Close All Browsers
 
-    ${title_name}        Get Title    
-    Log To Console    ${title_name}
     
        
  
