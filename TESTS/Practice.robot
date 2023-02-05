@@ -3,6 +3,7 @@
 Documentation        only training
 Library              SeleniumLibrary
 Library    String
+Library    OperatingSystem
 
 *** Variables ***
 
@@ -15,6 +16,7 @@ ${task_title}      newtask
 training
 
     Open Browser        ${url}    ${browser}
+    Add Cookie    trello_token    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1a2FzQGx1a2FzLnNrIiwiaWF0IjoxNjc1NTk5MzMzLCJleHAiOjE2NzU2MDI5MzMsInN1YiI6IjIifQ.2_0KJ19mq3cr6J6aKfvaY3Cr0bN7nq1nwgDZP1HPlcE
 
     Maximize Browser Window    
     Click Element      //*[@id="new-board"]
@@ -42,6 +44,19 @@ training
     Click Element    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/div[4]/button
         
     END
+
+
+    
+    Click Element   //input[@data-cy="task-done"]
+    
+    Click Element   //input[@data-cy="task-done"]  
+
+    ${title_name}        Get Title    
+    Log To Console    ${title_name}
+    
+       
+ 
+
     
     
 
