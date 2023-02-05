@@ -1,0 +1,36 @@
+*** Settings ***
+
+Documentation        Set coockies before creating board
+Library              SeleniumLibrary
+
+
+*** Variables ***
+
+${url}             http://localhost:3000/
+${browser}         chrome
+${board_title}     newboard 
+${list_title}      newlist
+
+*** Test Cases ***
+training
+    Open Browser        ${url}    ${browser}
+    Add Cookie    trello_token    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1a2FzQGx1a2FzLnNrIiwiaWF0IjoxNjc1NTk5MzMzLCJleHAiOjE2NzU2MDI5MzMsInN1YiI6IjIifQ.2_0KJ19mq3cr6J6aKfvaY3Cr0bN7nq1nwgDZP1HPlcE    
+    Maximize Browser Window    
+    Click Element      //*[@id="new-board"]
+    Input Text         //*[@id="new-board"]/input    ${board_title}
+    Double Click Element    //*[@id="new-board"]/div/button
+    Click Element     //*[@id="trello-app"]/div[5]/div[3]/div[2]/input
+    ${board_title}       Get Value    //*[@id="trello-app"]/div[5]/div[3]/div[2]/input    
+    Should Be Equal    ${board_title}    ${board_title}
+    Location Should Contain    http://localhost:3000/board/
+    
+    ${create_list}          Get Location
+    Go To    ${create_list}
+    Click Element    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div
+    Input Text    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div/input    ${list_title}
+    Click Element    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div/div/button
+     ${list_title}   Get Value    //*[@id="trello-app"]/div[5]/div[3]/div[3]/div[1]/input
+    Should Be Equal     ${list_title}        ${list_title}
+    ${list_url}          Get Location 
+    Location Should Be    ${list_url} 
+        
